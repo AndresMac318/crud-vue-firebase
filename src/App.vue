@@ -1,10 +1,47 @@
 <template>
-  <div id="nav">
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
+  <div>
+    <Navigation/>
+    
+    <div class="container mt-5">
+      <router-view></router-view>
+    </div>
+
   </div>
-  <router-view/>
 </template>
+
+<script>
+import Navigation from './components/Navigation.vue'
+
+//import Navigation  from "@/components/Navigation";
+
+
+/* import { onBeforeMount } from 'vue';
+import { useRouter, useRoute } from 'vue-router';
+//import { db } from '../src/firebaseDb';
+import {dbauth} from '../src/firebaseDb'; */
+
+export default {
+
+  components:{
+    Navigation
+  }
+
+  /* setup(){
+    const router = useRouter();
+    const route = useRoute();
+
+    onBeforeMount(()=>{
+      dbauth.auth().onAuthStateChanged((user)=>{
+        if(!user){
+          router.replace('/login');
+        }else if(route.path == "/login" || route.path == "/registro"){
+          router.replace('/');
+        }
+      })
+    });
+  }*/
+}
+</script>
 
 <style>
 #app {
