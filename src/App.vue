@@ -1,19 +1,27 @@
 <template>
-  <div>
-    <Navigation/>
+  <div class="container">
+    <div>
+      <Navigation />
+    </div>
     
-    <div class="container mt-5">
-      <router-view></router-view>
+    <div class="row">
+      <div class="col col-md-3 bg-dark">
+        <NavVer class="y-max"/>
+      </div>
+
+      <div class="col col-md-9">
+        <router-view></router-view>
+      </div>
     </div>
 
   </div>
 </template>
 
 <script>
-import Navigation from './components/Navigation.vue'
+import Navigation from "./components/Navigation.vue";
+import NavVer from "./components/NavVertical/NavVer.vue";
 
 //import Navigation  from "@/components/Navigation";
-
 
 /* import { onBeforeMount } from 'vue';
 import { useRouter, useRoute } from 'vue-router';
@@ -21,10 +29,10 @@ import { useRouter, useRoute } from 'vue-router';
 import {dbauth} from '../src/firebaseDb'; */
 
 export default {
-
-  components:{
-    Navigation
-  }
+  components: {
+    Navigation,
+    NavVer,
+  },
 
   /* setup(){
     const router = useRouter();
@@ -40,7 +48,7 @@ export default {
       })
     });
   }*/
-}
+};
 </script>
 
 <style>
@@ -63,5 +71,10 @@ export default {
 
 #nav a.router-link-exact-active {
   color: #42b983;
+}
+
+.y-max{
+  height: 100vh;
+  
 }
 </style>

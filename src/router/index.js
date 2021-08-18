@@ -4,26 +4,42 @@ import firebase from 'firebase'
 
 const routes = [
   {
-    path: '/login',
-    name: 'login',
-    component: () => import(/* webpackChunkName: "login" */ '../views/auth/Login')
+    path: '/register',
+    name: 'register',
+    component: () => import(/* webpackChunkName: "login" */ '../views/auth/Register')
   },
   {
-    path: '/create',
-    name: 'crear',
-    component: () => import(/* webpackChunkName: "crear" */ '../components/PersonaCreate'),
-    meta: {
+    path: '/products',
+    name: 'products',
+    component: () => import(/* webpackChunkName: "crear" */ '../components/Products'),
+    /* meta: {
       requiresAuth: true
-    }
+    } */
+  },
+  {
+    path: '/customers',
+    name: 'customers',
+    component: () => import(/* webpackChunkName: "crear" */ '../components/Customers'),
+    /* meta: {
+      requiresAuth: true
+    } */
+  },
+  {
+    path: '/vendors',
+    name: 'vendors',
+    component: () => import(/* webpackChunkName: "crear" */ '../components/Vendors'),
+    /* meta: {
+      requiresAuth: true
+    } */
   },
   {
     path: '/',
-    name: 'register',
-    component: () => import(/* webpackChunkName: "registro" */ '../views/auth/Register')
+    name: 'login',
+    component: () => import(/* webpackChunkName: "registro" */ '../views/auth/Login')
   },
   {
-    path: '/list',
-    name: 'list',
+    path: '/productos',
+    name: 'productos',
     component: () => import(/* webpackChunkName: "pLista" */ '../components/PersonaList'),
     meta: {
       requiresAuth: true

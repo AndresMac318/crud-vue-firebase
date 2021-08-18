@@ -1,7 +1,7 @@
 <template>
   <div class="row justify-content-center">
       <div class="col-md-12">
-        <table class="table table-striped">
+        <table class="table table-light">
           <thead>
             <tr>
               <th>Nombres</th>

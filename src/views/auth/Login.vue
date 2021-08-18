@@ -1,29 +1,35 @@
 <template>
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="row justify-content-center">
-                <div class="col-md-8">
-                    <h3 class="text-center">Iniciar sesión</h3>
-                    <form action="#" @submit.prevent="login">
-                        <div class="form-group pt-4">
-                            <label class="h5">Correo</label> 
-                            <input type="email" class="form-control" placeholder="ej. PeterDink@gmail.com" v-model="correo" required />
+        <div class="container">
+            <div class="row">
+
+                <div class="col-8">
+                    <img src="../../img/programming.svg" alt="" class="w-auto h-auto object-cover"/>
+                </div>
+
+                <div class="col-4">
+                    <div class="">
+                        <h3 class="text-center">Log in to your account</h3>
+                        <form action="#" @submit.prevent="login">
+                            <div class="form-group pt-4">
+                                <label class="h5">Email Address</label> 
+                                <input type="email" class="form-control" placeholder="Enter Email Address" v-model="correou" required />
+                            </div>
+                            <div class="form-group pt-4">
+                                <label class="h5">Password</label> 
+                                <input type="password" class="form-control" placeholder="Enter Password" v-model="passwordu" required />
+                            </div>
+                            <div>
+                                <button type="submit" class="btn btn-primary mt-4" @click="login">Log In</button>
+                            </div>
+                        </form>
+                        <div class="alert alert-danger mt-4" role="alert" v-if="error">
+                            {{error}}
                         </div>
-                        <div class="form-group pt-4">
-                            <label class="h5">Contraseña</label> 
-                            <input type="password" class="form-control" v-model="password" required />
-                        </div>
-                        <div>
-                            <button type="submit" class="btn btn-primary mt-4" @click="login">Iniciar sesión</button>
-                        </div>
-                    </form>
-                    <div class="alert alert-danger mt-4" role="alert" v-if="error">
-                        {{error}}
                     </div>
                 </div>
             </div>
         </div>
-    </div>
+        
 </template>
 
 <script>
@@ -34,8 +40,8 @@ import firebase from 'firebase'
 export default {
     data(){
         return {
-            correo: '',
-            password: '',
+            correou: '',
+            passwordu: '',
             error: ''
         }
     },
@@ -43,11 +49,11 @@ export default {
     methods: {
         login(){
             this.error=''
-            if(this.correo && this.password){
-                firebase.auth().signInWithEmailAndPassword(this.correo, this.password)
+            if(this.correou && this.passwordu){
+                firebase.auth().signInWithEmailAndPassword(this.correou, this.passwordu)
                 .then((user) => {
                     console.log('se inicio sesion!!')
-                    this.$router.push("/list")
+                    this.$router.push("/products")
                     console.log(user);
                 }).catch(err => {
                     this.error=err.message
