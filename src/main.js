@@ -4,8 +4,7 @@ import router from './router'
 import firebase from 'firebase'
 import '@/firebaseDb'
 
-
-import 'bootstrap/dist/css/bootstrap.min.css'
+import './assets/tailwind.css'
 
 let app = null
 

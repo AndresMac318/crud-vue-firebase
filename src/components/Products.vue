@@ -1,30 +1,35 @@
 <template>
-<div>
-  
-  <div class="row justify-content-center">
-      <div class="col-md-8">
-        <div class="row justify-content-center">
-          <div class="col-md-8">
-            
-            <h3 class="text-center">Product create</h3>
-            <form @submit.prevent="create">
-              <div class="form-group">
-                <label>Code</label> <input type="number" class="form-control" v-model="producto.idproducto" required />
+
+<div class="mt-20 w-screen h-screen">
+  <div class="w-full h-full">
+      <div class="">
+        <div class="flex flex-col">
+         
+          <div class="h-full w-full bg-white rounded-md flex flex-row">
+            <NavVer class="rounded-md"/>
+            <h3 class="text-xl md:text-2xl font-bold leading-tight m-5">Product create</h3>
+            <form @submit.prevent="create" class="mt-6">
+              <div class="">
+                <label class="text-gray-800">Code</label> <input type="number" class="px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-blue-500 focus:bg-white focus:outline-none" v-model="producto.idproducto" required />
               </div>
               <div class="form-group">
-                <label>Name</label> <input type="text" class="form-control" v-model="producto.nombrep" required />
+                <label class="text-gray-800">Name</label> <input type="text" class="px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-blue-500 focus:bg-white focus:outline-none" v-model="producto.nombrep" required />
               </div>
               <div class="form-group">
-                <label>Description</label> <input type="text" class="form-control" v-model="producto.descripcionp" required />
+                <label class="text-gray-800">Description</label> <input type="text" class="px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-blue-500 focus:bg-white focus:outline-none" v-model="producto.descripcionp" required />
               </div>
               <div class="form-group">
-                <label>Price</label> <input type="number" class="form-control" v-model="producto.preciop" required />
+                <label class="text-gray-800">Price</label> <input type="number" class="px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-blue-500 focus:bg-white focus:outline-none" v-model="producto.preciop" required />
               </div>
               <div class="form-group">
-                <label>Stock</label> <input type="number" class="form-control" v-model="producto.stockp" required />
+                <label class="text-gray-800">Stock</label> <input type="number" class="px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-blue-500 focus:bg-white focus:outline-none" v-model="producto.stockp" required />
               </div>
               <div class="form-group mt-4">
-                <button class="btn btn-primary btn-black">Add product</button>
+                <button type="submit" class="bg-indigo-500 hover:bg-indigo-400 
+                focus:bg-indigo-400 text-white font-semibold rounded-lg 
+                px-4 py-3 mt-6" @click="login">
+                    add product
+                </button>
               </div>
             </form>
           </div>
@@ -45,10 +50,12 @@
 
 import db from '../firebaseDb.js'
 import tabProduct from './Tables/TableProduct.vue';
+import NavVer from "./NavVertical/NavVer.vue";
 
 export default {
   components:{
     tabProduct,
+    NavVer
   },
   data(){
     return{

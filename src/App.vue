@@ -1,15 +1,10 @@
 <template>
-  <div class="container">
+  <div class="">
     <div>
       <Navigation />
     </div>
-    
-    <div class="row">
-      <div class="col col-md-3 bg-dark">
-        <NavVer class="y-max"/>
-      </div>
-
-      <div class="col col-md-9">
+    <div class="">
+      <div class="">
         <router-view></router-view>
       </div>
     </div>
