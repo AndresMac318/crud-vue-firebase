@@ -140,7 +140,7 @@
             >
               <div class="flex">
                 <router-link
-                  :to="{ name: 'edit', params: { id: producto.key } }"
+                :to="{ name: 'editProduct', params: { id: producto.key } }"
                   class="
                     text-indigo-600
                     hover:text-indigo-900
@@ -240,7 +240,8 @@ export default {
           .doc(id)
           .delete()
           .then(() => {
-            console.log("Producto borrado!!");
+            this.$router.push({ name: "tabProduct" });
+            alert("Producto borrado!!");
           })
           .catch((error) => {
             console.log(error);

@@ -7,21 +7,21 @@
           <div class="h-full w-full bg-white rounded-md flex flex-row">
             <NavVer class="rounded-md"/>
             <h3 class="text-xl md:text-2xl font-bold leading-tight m-5">Customer create</h3>
-            <form @submit.prevent="createc" class="items-center">
+            <form @submit.prevent="createc" class="items-center mt-6 ml-36">
               <div class="form-group">
-                <label class="text-gray-800">Id</label> <input type="number" class="px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-blue-500 focus:bg-white focus:outline-none" v-model="cliente.idcliente" required />
+                <label class="text-gray-800 flex justify-center">ID</label> <input type="number" class="px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-blue-500 focus:bg-white focus:outline-none" v-model="cliente.idcliente" required />
               </div>
               <div class="form-group">
-                <label class="text-gray-800">Name</label> <input type="text" class="px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-blue-500 focus:bg-white focus:outline-none" v-model="cliente.nombrec" required />
+                <label class="text-gray-800 flex justify-center">Name</label> <input type="text" class="px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-blue-500 focus:bg-white focus:outline-none" v-model="cliente.nombrec" required />
               </div>
               <div class="form-group">
-                <label class="text-gray-800">Email</label> <input type="email" class="px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-blue-500 focus:bg-white focus:outline-none" v-model="cliente.correoc" required />
+                <label class="text-gray-800 flex justify-center">Email</label> <input type="email" class="px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-blue-500 focus:bg-white focus:outline-none" v-model="cliente.correoc" required />
               </div>
               <div class="form-group">
-                <label class="text-gray-800">Telephone</label> <input type="number" class="px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-blue-500 focus:bg-white focus:outline-none" v-model="cliente.telefonoc" required />
+                <label class="text-gray-800 flex justify-center">Telephone</label> <input type="number" class="px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-blue-500 focus:bg-white focus:outline-none" v-model="cliente.telefonoc" required />
               </div>
               <div class="form-group">
-                <label class="text-gray-800">Address</label> <input type="text" class="px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-blue-500 focus:bg-white focus:outline-none" v-model="cliente.direccionc" required />
+                <label class="text-gray-800 flex justify-center">Address</label> <input type="text" class="px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-blue-500 focus:bg-white focus:outline-none" v-model="cliente.direccionc" required />
               </div>
               <div class="form-group mt-4">
                  <button type="submit" class="bg-indigo-500 hover:bg-indigo-400 

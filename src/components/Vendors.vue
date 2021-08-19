@@ -7,18 +7,18 @@
           <div class="h-full w-full bg-white rounded-md flex flex-row">
             <NavVer class="rounded-md"/>
             <h3 class="text-xl md:text-2xl font-bold leading-tight m-5">Vendor create</h3>
-            <form @submit.prevent="createp" class="mt-6">
+            <form @submit.prevent="createp" class="mt-6 ml-36">
               <div class="form-group">
-                <label class="text-gray-800">NIT</label> <input type="number" class="px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-blue-500 focus:bg-white focus:outline-none" v-model="proovedor.nitpr" required />
+                <label class="text-gray-800 flex justify-center">NIT</label> <input type="number" class="px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-blue-500 focus:bg-white focus:outline-none" v-model="proovedor.nitpr" required />
               </div>
               <div class="form-group">
-                <label class="text-gray-800">Name</label> <input type="text" class="px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-blue-500 focus:bg-white focus:outline-none" v-model="proovedor.nombrepr" required />
+                <label class="text-gray-800 flex justify-center">Name</label> <input type="text" class="px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-blue-500 focus:bg-white focus:outline-none" v-model="proovedor.nombrepr" required />
               </div>
               <div class="form-group">
-                <label class="text-gray-800">Telephone</label> <input type="number" class="px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-blue-500 focus:bg-white focus:outline-none" v-model="proovedor.telefonopr" required />
+                <label class="text-gray-800  flex justify-center">Telephone</label> <input type="number" class="px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-blue-500 focus:bg-white focus:outline-none" v-model="proovedor.telefonopr" required />
               </div>
               <div class="form-group">
-                <label class="text-gray-800">Address</label> <input type="text" class="px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-blue-500 focus:bg-white focus:outline-nonel" v-model="proovedor.direccionpr" required />
+                <label class="text-gray-800  flex justify-center">Address</label> <input type="text" class="px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-blue-500 focus:bg-white focus:outline-nonel" v-model="proovedor.direccionpr" required />
               </div>
               <div class="form-group mt-4">
                  <button type="submit" class="bg-indigo-500 hover:bg-indigo-400 
@@ -73,6 +73,7 @@ export default {
         (this.proovedor.telefonopr=0),
         (this.proovedor.direccionpr="");
          //this.$router.push({name: 'products'})
+         this.$router.push({name: 'vendors'})
       })
       .catch((error)=>{
       console.log(error);

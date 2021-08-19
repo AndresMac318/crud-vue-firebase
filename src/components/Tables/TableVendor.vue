@@ -110,8 +110,7 @@
             </td>
             <td class="px-6 py-4 whitespace-no-wrap border-b border-gray-200">
               <div class="flex">
-                <router-link
-                  :to="{ name: 'edit', params: { id: proovedor.key } }"
+                <router-link :to="{ name: 'editVendor', params: { id: proovedor.key }}" 
                   class="
                     text-indigo-600
                     hover:text-indigo-900
@@ -210,7 +209,7 @@ export default {
           .doc(id)
           .delete()
           .then(() => {
-            console.log("Proovedor borrado!!");
+             alert("Proovedor borrado!!");
           })
           .catch((error) => {
             console.log(error);

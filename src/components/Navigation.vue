@@ -133,7 +133,7 @@ export default {
         .signOut()
         .then((answer) => {
           console.log(answer + "Sesion cerrada!");
-          this.$router.push("/login");
+          this.$router.push("/");
         });
     },
     /* action(){

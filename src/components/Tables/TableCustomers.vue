@@ -125,8 +125,7 @@
             </td>
             <td class="px-2 py-2 whitespace-no-wrap border-b border-gray-200 flex flex-row">
               <div class="flex">
-                <router-link
-                  :to="{ name: 'edit', params: { id: cliente.key } }"
+                <router-link :to="{ name: 'editCustomer', params: { id: cliente.key }}"
                   class="
                     text-indigo-600
                     hover:text-indigo-900
@@ -226,7 +225,7 @@ export default {
           .doc(id)
           .delete()
           .then(() => {
-            console.log("Cliente borrado!!");
+               alert("Cliente borrado!!");
           })
           .catch((error) => {
             console.log(error);

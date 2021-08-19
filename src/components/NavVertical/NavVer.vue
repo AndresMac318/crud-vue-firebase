@@ -37,7 +37,7 @@
                   />
                 </svg>
               </div>
-              <span class="ml-2 none none8">Products</span>
+              <span class="ml-2 none text-gray-200">Products</span>
             </router-link>
           </li>
           <li class="nav-item">
@@ -69,7 +69,7 @@
                   />
                 </svg>
               </div>
-              <span class="ml-2 none none8">Customers</span>
+              <span class="ml-2 none text-gray-200">Customers</span>
             </router-link>
           </li>
           <li class="nav-item">
@@ -100,7 +100,7 @@
                   />
                 </svg>
               </div>
-              <span class="ml-2 none none8">Vendors</span>
+              <span class="ml-2 none text-gray-200">Vendors</span>
             </router-link>
           </li>
         </ul>
@@ -112,9 +112,6 @@
 <script>
 export default {
   name: "NavVer",
-  data() {
-    return {};
-  },
 };
 </script>
 
