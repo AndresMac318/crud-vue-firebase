@@ -34,7 +34,7 @@
           </div>
         </div>
 
-        <div class="row justify-content-center">
+        <div class="justify-content-center">
           <tabCustomer/>
         </div>
 
