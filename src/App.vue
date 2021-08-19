@@ -1,5 +1,5 @@
 <template>
-  <div class="">
+  <div class="md xl:container lg:container md:container">
     <div>
       <Navigation />
     </div>
