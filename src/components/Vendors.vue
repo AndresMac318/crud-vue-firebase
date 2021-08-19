@@ -6,7 +6,7 @@
         <div class="flex flex-colr">
           <div class="h-full w-full bg-white rounded-md flex flex-row">
             <NavVer class="rounded-md"/>
-            <h3 class="text-xl md:text-2xl font-bold leading-tight m-5">Vendor create</h3>
+            <h3 class="text-xl md:text-2xl font-bold leading-tight m-5">Vendors create</h3>
             <form @submit.prevent="createp" class="mt-6 ml-36">
               <div class="form-group">
                 <label class="text-gray-800 flex justify-center">NIT</label> <input type="number" class="px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-blue-500 focus:bg-white focus:outline-none" v-model="proovedor.nitpr" required />
