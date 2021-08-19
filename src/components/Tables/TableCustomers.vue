@@ -20,7 +20,7 @@
               <td>{{ cliente.telefonoc }}</td>
               <td>{{ cliente.direccionc }}</td>
               <td>
-                <router-link :to="{ name: 'edit', params: { id: cliente.key }}" class="btn btn-primary me-1">Edit</router-link> |
+                <router-link :to="{ name: 'editCustomer', params: { id: cliente.key }}" class="btn btn-primary me-1">Edit</router-link> |
                 <button @click.prevent="deleteCustomer(cliente.key)" class="btn btn-danger">Delete</button>
               </td>
             </tr>
@@ -65,7 +65,7 @@ export default {
         .doc(id)
         .delete()
         .then(()=>{
-          console.log("Cliente borrado!!");
+          alert("Cliente borrado!!");
         })
         .catch((error)=>{
           console.log(error);

@@ -30,7 +30,7 @@
           </div>
         </div>
 
-        <div class="row justify-content-center">
+        <div class="row justify-content-center x-max">
           <tabCustomer/>
         </div>
 
@@ -82,3 +82,9 @@ export default {
     },
     };
 </script>
+
+<style>
+  .x-max{
+    width: 100vw;
+  }
+</style>

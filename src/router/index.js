@@ -12,25 +12,25 @@ const routes = [
     path: '/products',
     name: 'products',
     component: () => import(/* webpackChunkName: "crear" */ '../components/Products'),
-    /* meta: {
+    meta: {
       requiresAuth: true
-    } */
+    }
   },
   {
     path: '/customers',
     name: 'customers',
     component: () => import(/* webpackChunkName: "crear" */ '../components/Customers'),
-    /* meta: {
+    meta: {
       requiresAuth: true
-    } */
+    }
   },
   {
     path: '/vendors',
     name: 'vendors',
     component: () => import(/* webpackChunkName: "crear" */ '../components/Vendors'),
-    /* meta: {
+    meta: {
       requiresAuth: true
-    } */
+    }
   },
   {
     path: '/',
@@ -38,17 +38,25 @@ const routes = [
     component: () => import(/* webpackChunkName: "registro" */ '../views/auth/Login')
   },
   {
-    path: '/productos',
-    name: 'productos',
-    component: () => import(/* webpackChunkName: "pLista" */ '../components/PersonaList'),
+    path: '/editCustomer/:id',
+    name: 'editCustomer',
+    component: () => import(/* webpackChunkName: "pEditar" */ '../components/Edit/CustomerEdit.vue'),
     meta: {
       requiresAuth: true
     }
   },
   {
-    path: '/edit/:id',
-    name: 'edit',
-    component: () => import(/* webpackChunkName: "pEditar" */ '../components/PersonaEdit'),
+    path: '/editProduct/:id',
+    name: 'editProduct',
+    component: () => import(/* webpackChunkName: "pEditar" */ '../components/Edit/ProductsEdit.vue'),
+    meta: {
+      requiresAuth: true
+    }
+  },
+  {
+    path: '/editVendor/:id',
+    name: 'editVendor',
+    component: () => import(/* webpackChunkName: "pEditar" */ '../components/Edit/VendorsEdit.vue'),
     meta: {
       requiresAuth: true
     }

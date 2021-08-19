@@ -16,10 +16,7 @@
         <ul class="nav navbar-nav flex-row float-right">
           <ul class="nav navbar-nav flex-row float-right" v-if="user">
             <li class="nav-item">
-              <router-link class="nav-link pe-3" to="/products">Agregar productos</router-link>
-            </li>
-            <li class="nav-item">
-              <router-link class="nav-link pe-3" to="/list">Ver usuarios</router-link>
+              <router-link class="nav-link pe-3" to="/products">Dashboard</router-link>
             </li>
             <li class="nav-item">
               <a class="nav-link btn" @click.prevent="logout">Log out</a>
@@ -59,7 +56,7 @@ export default {
       logout(){
         firebase.auth().signOut().then((answer)=>{
           console.log(answer+'Sesion cerrada!');
-          this.$router.push("/login");
+          this.$router.push("/");
         })
       },
       /* action(){

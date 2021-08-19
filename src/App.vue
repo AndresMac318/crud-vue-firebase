@@ -5,11 +5,11 @@
     </div>
     
     <div class="row">
-      <div class="col col-md-3 bg-dark">
+      <div class="col col-md-3 bg-dark" v-if="user">
         <NavVer class="y-max"/>
       </div>
 
-      <div class="col col-md-9">
+      <div class="col col-md-9 bg-gray y-max">
         <router-view></router-view>
       </div>
     </div>
@@ -20,6 +20,9 @@
 <script>
 import Navigation from "./components/Navigation.vue";
 import NavVer from "./components/NavVertical/NavVer.vue";
+
+import firebase from 'firebase'
+import './firebaseDb'
 
 //import Navigation  from "@/components/Navigation";
 
@@ -33,6 +36,20 @@ export default {
     Navigation,
     NavVer,
   },
+  data(){
+    return{
+      user: null,
+    }
+  },
+  created(){
+        firebase.auth().onAuthStateChanged(user => {
+        if(user){
+          this.user=user
+        }else{
+          this.user=null
+        }
+      })
+    }
 
   /* setup(){
     const router = useRouter();
@@ -76,5 +93,10 @@ export default {
 .y-max{
   height: 100vh;
   
+}
+
+.bg-gray{
+  --tw-bg-opacity: 1;
+  background-color: rgba(229, 231, 235, var(--tw-bg-opacity));
 }
 </style>

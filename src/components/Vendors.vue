@@ -66,7 +66,7 @@ export default {
         this.proovedor.nombrepr="";
         (this.proovedor.telefonopr=0),
         (this.proovedor.direccionpr="");
-         //this.$router.push({name: 'products'})
+         this.$router.push({name: 'vendors'})
       })
       .catch((error)=>{
       console.log(error);

@@ -18,8 +18,15 @@
               <td>{{ proovedor.telefonopr }}</td>
               <td>{{ proovedor.direccionpr }}</td>
               <td>
-                <router-link :to="{ name: 'edit', params: { id: proovedor.key }}" class="btn btn-primary me-1">Edit</router-link> |
-                <button @click.prevent="deleteVendor(proovedor.key)" class="btn btn-danger">Delete</button>
+                <div class="row">
+                  <div class="col">
+                  <button class="btn btn-sm"><router-link :to="{ name: 'editVendor', params: { id: proovedor.key }}" class="btn btn-primary me-1">Edit</router-link></button>
+
+                  </div>
+                  <div class="col">
+                  <button @click.prevent="deleteVendor(proovedor.key)" class="col btn btn-danger btn-sm">Delete</button>
+                  </div>
+                </div>
               </td>
             </tr>
           </tbody>
@@ -62,7 +69,7 @@ export default {
         .doc(id)
         .delete()
         .then(()=>{
-          console.log("Proovedor borrado!!");
+          alert("Proovedor borrado!!");
         })
         .catch((error)=>{
           console.log(error);

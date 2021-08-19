@@ -21,13 +21,11 @@
 </template>
 
 <script>
+
+
+
 export default {
     name: 'NavVer',
-    data(){
-        return{
-
-        }
-    }
 
 }
 </script>
